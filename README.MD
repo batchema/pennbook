@@ -1,50 +1,53 @@
+# PennBook 
+**Descriptions**\
+PennBook is an implementation of the core functionality of facebook.com using 
+a Node.js server, React.js for the frontend, and Apache Spark and Elastic MapReduce for the Big Data functionalities. Below are implementations are implementation details. The actual code is in a private repo per university policies. Feel free to reach out for more details.
+
 **Team Members**
 
-[Divya Somayajula](mailto:divyas22@seas.upenn.edu) (divyas22)
+- [Batchema Sombie](https://www.github.com/batchema) (batchema)
 
-[Olivia O&#39;Dwyer](mailto:oodwyer@seas.upenn.edu) (oodwyer)
+- Divya Somayajula
 
-[Ishaan Rao](mailto:ishaanr@seas.upenn.edu) (ishaanr)
+- Olivia O&#39;Dwyer
 
-[Batchema Sombie](mailto:batchema@sas.upenn.edu) (batchema)
+- Ishaan Rao
 
-**System Requirements**
 
-1. Node.js version 12.X
-2. Java JDK 15
-3. Maven 3.6.3
+## Features
 
-**Description of Features**
-
-**Accounts** : Users have the ability to create accounts, sign in and sign out, have a hashed password for security, and can change any of their interests, affiliation, or password. Users can create posts, friend other users, comment on posts, as well as like posts, articles, and comments.
-**Walls and Home Pages** : Each user has their own wall that other people can post on and their status updates are displayed on. Each user&#39;s home page shows a feed of their friends&#39; posts and status updates as well as two recommended news articles. The home page also shows a list of new friendships, friends who are online, and any pending friend requests. Users can start a chat session with any online friend from the home page. The wall contains all basic information about the user and a list of their friends.
-**Chat** : Each user can create chats with other users, including group chats; notifications are sent when a chat is received, and unread chats show up as bolded for distinction. All chats are persistent and real-time if both users are online (using socket.io).
-**Search:** Users can search for other users by name using the search bar, which queries a table that stores all possible prefixes for each user.
-**News Feeds** : Each user has a news feed with relevant news articles. Articles are recommended to users based on their interests and which articles they have liked in the past, and all of these show up on the home page. In addition to these, users can search for news articles and will get relevant, sorted results.
-
+**Accounts**   
+Users have the ability to create accounts, sign in and sign out, have a hashed password for security, and can change any of their interests, affiliation, or password. Users can create posts, friend other users, comment on posts, as well as like posts, articles, and comments.\
+**Walls and Home Pages**  
+Each user has their own wall that other people can post on and their status updates are displayed on. Each user&#39;s home page shows a feed of their friends&#39; posts and status updates as well as two recommended news articles. The home page also shows a list of new friendships, friends who are online, and any pending friend requests. Users can start a chat session with any online friend from the home page. The wall contains all basic information about the user and a list of their friends.\
+**Chat**   
+Each user can create chats with other users, including group chats; notifications are sent when a chat is received, and unread chats show up as bolded for distinction. All chats are persistent and real-time if both users are online (using socket.io).\
+**Search**  
+Users can search for other users by name using the search bar, which queries a table that stores all possible prefixes for each user.\
+**News Feeds** 
+Each user has a news feed with relevant news articles. Articles are recommended to users based on their interests and which articles they have liked in the past, and all of these show up on the home page. In addition to these, users can search for news articles and will get relevant, sorted results.
 The recommendations system is run as a Spark job on Livy every hour and on trigger when a user changes their interests.
 
-**Extra Credit Features**
+### Extra Credit
 
-Replicating Facebook style likes for posts
-Liking comments and articles
-Pending/Accepting friend requests
+Replicating Facebook style likes for posts\
+Liking comments and articles\
+Pending/Accepting friend requests\
 Chat Notifications (per message)
 
-**List of Source Files**
+## Source Files
 
-client/
+**`client/`**
 Comment.js, Home.js, HomeNavBar.js, Messages.js, NewsArticle.js, NewsFeed.js, Post.js, Profile.js, Signup.js, Visualizer.js, newsConstants.js, ports.js, auth.js, AuthRoute.js, Home.css, HomeNavBar.css, Login.css, MainNavBar.css, Messages.css, NewsFeed.css, Profile.css, Signup.css, utils.js, App.js, App.css
 
-server/
+**`server/`**
 accounts.js, articles\_upload.js, articles-likes.js, articles.js, chats.js, comments-likes.js, friends.js, groups.js, posts\_likes.js, posts.js, recommendations.js, account\_routes.js, chat\_routes.js, comments\_likes\_routes.js, friends\_routes.js, login\_routes.js, news\_feed\_routes.js, recommendations.js, search\_routes.js, visualizer\_routes.js, wall\_home\_routes.js, config.js, jwt.js, app.js
 
-spark/
+**`spark/`**
 Config.java, AdsorptionJob.java, ComputeLivy.java, DataManager.java, DynamoConnector.java, S3Connector.java, SparkConnector.java, MyPair.java
 
-**All code submitted was written by us.**
-
-**Third Party Libraries (all in package.json, can get using npm install)**
+**Third Party Libraries**  
+(for Node server and React Frontend. Check spark/pom.xml for java dependencies)
 
 - Bcrypt - used for secure password hashing
 - React-graph-vis - used for visualizer
@@ -52,9 +55,14 @@ Config.java, AdsorptionJob.java, ComputeLivy.java, DataManager.java, DynamoConne
 - UUIDv4 - used for generating UUIDs for chat ids and visualizer graphs
 - Socket.io - used for realtime chat and notifications
 
-**Instructions for Building/Running App**
+## Instructions for Building/Running App
 
-- Make sure that all system requirements from the Systems requirements section are met. Follow these links for [Node](https://nodejs.org/en/blog/release/v12.16.1/), [Java JDK](https://docs.oracle.com/en/java/javase/15/install/overview-jdk-installation.html#GUID-8677A77F-231A-40F7-98B9-1FD0B48C346A), and [Maven](https://maven.apache.org/install.html) installations. It is critical that the versions match, especially for Java JDK and Apache Maven.
+**System Requirements**
+1. Node.js version 12.X
+2. Java JDK 15
+3. Maven 3.6.3
+   
+- Make sure that all system requirements are met. Follow these links for [Node](https://nodejs.org/en/blog/release/v12.16.1/), [Java JDK](https://docs.oracle.com/en/java/javase/15/install/overview-jdk-installation.html#GUID-8677A77F-231A-40F7-98B9-1FD0B48C346A), and [Maven](https://maven.apache.org/install.html) installations. It is critical that the versions match, especially for the Java JDK and Apache Maven.
 - In the `server/` folder, run ` npm ci `
 - In the `client/` folder, run ` npm ci `
 - In the `client/` folder, run `npm run build`
@@ -72,7 +80,8 @@ Config.java, AdsorptionJob.java, ComputeLivy.java, DataManager.java, DynamoConne
   2. Deployed on EC2: If running on EC2, navigate to `server/` and run `npm run start-prod`. You should see the application at `<PublicIP>:80`.
 
 
-**Database schema:**
+## Database schema 
+We used DynamoDB. **bold** fields are keys. Partition keys are indicated
 
 - accounts
   - **username - String (partition)**
@@ -172,3 +181,21 @@ Config.java, AdsorptionJob.java, ComputeLivy.java, DataManager.java, DynamoConne
   - **prefix - String (partition)**
   - **username - String (sort)**
   - fullname
+
+## Screenshots 
+Login Page
+![login](screenshots/login.png?raw=true "Title")
+Registration Page
+![login](screenshots/registration.png?raw=true "Title")
+Homepage
+![login](screenshots/homepage.png?raw=true "Title")
+news search Page
+![login](screenshots/news_search.png?raw=true "Title")
+profile Page
+![login](screenshots/profile.png?raw=true "Title")
+Friend Network Visualizer Page
+![login](screenshots/friend_network_visualizer.png?raw=true "Title")
+Chat Page
+![login](screenshots/chat.png?raw=true "Title")
+Spark Job Running on AWS EMR (Livy Interface)
+![login](screenshots/spark.png?raw=true "Title")
