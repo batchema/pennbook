@@ -184,18 +184,25 @@ We used DynamoDB. **bold** fields are keys. Partition keys are indicated
 
 ## Screenshots 
 Login Page
-![login](screenshots/login.png?raw=true "Title")
+![login](screenshots/login.png?raw=true "Title")   
+
 Registration Page
-![login](screenshots/registration.png?raw=true "Title")
+![login](screenshots/registration.png?raw=true "Title")   
+
 Homepage
-![login](screenshots/homepage.png?raw=true "Title")
+![login](screenshots/homepage.png?raw=true "Title")   
+
 news search Page
-![login](screenshots/news_search.png?raw=true "Title")
+![login](screenshots/news_search.png?raw=true "Title")  
+
 profile Page
-![login](screenshots/profile.png?raw=true "Title")
+![login](screenshots/profile.png?raw=true "Title")  
+
 Friend Network Visualizer Page
-![login](screenshots/friend_network_visualizer.png?raw=true "Title")
+![login](screenshots/friend_network_visualizer.png?raw=true "Title")  
+
 Chat Page
-![login](screenshots/chat.png?raw=true "Title")
+![login](screenshots/chat.png?raw=true "Title")   
+
 Spark Job Running on AWS EMR (Livy Interface)
 ![login](screenshots/spark.png?raw=true "Title")

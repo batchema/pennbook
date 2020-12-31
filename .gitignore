@@ -3,6 +3,5 @@
 server/articles.json
 server/bin.txt
 **/.DS_STORE
-./NETS_212_Project_Report.pdf
-./Project.pdf
+ignore/*
 
