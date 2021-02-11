@@ -48,16 +48,14 @@ Each user has their own wall that other people can post on and their status upda
 Each user can create chats with other users, including group chats; notifications are sent when a chat is received, and unread chats show up as bolded for distinction. All chats are persistent and real-time if both users are online (using socket.io).\
 **Search**  
 Users can search for other users by name using the search bar, which queries a table that stores all possible prefixes for each user.\
-**News Feeds** 
+**News Feeds**   
 Each user has a news feed with relevant news articles. Articles are recommended to users based on their interests and which articles they have liked in the past, and all of these show up on the home page. In addition to these, users can search for news articles and will get relevant, sorted results.
-The recommendations system is run as a Spark job on Livy every hour and on trigger when a user changes their interests.
-
-### Extra Credit
-
-Replicating Facebook style likes for posts\
-Liking comments and articles\
-Pending/Accepting friend requests\
-Chat Notifications (per message)
+The recommendations system is run as a Spark job on Livy every hour and on trigger when a user changes their interests.\
+**Extra Credit**  
+- Replicating Facebook style likes for posts
+- Liking comments and articles
+- Pending/Accepting friend requests
+- Chat Notifications (per message)
 
 ## Source Files
 
