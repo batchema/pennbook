@@ -1,9 +1,9 @@
 # PennBook 
-**Descriptions**\
-PennBook is an implementation of the core functionality of facebook.com using 
-a Node.js server, React.js for the frontend, and Apache Spark and Elastic MapReduce for the Big Data functionalities. Below are implementations are implementation details. The actual code is in a private repo per university policies. Feel free to reach out for more details.
+## Descriptions
+PennBook is an implementation of the core functionalities of facebook.com. It uses 
+a Node.js server, React.js for the frontend, and Hadoop libraries such Apache Spark along with AWS Elastic MapReduce for the Big Data functionalities. Below are implementation details. The actual code is in a private repo per university policies. Feel free to reach out for more details.
 
-**Team Members**
+## Team Members
 
 - [Batchema Sombie](https://www.github.com/batchema) (batchema)
 
@@ -13,6 +13,30 @@ a Node.js server, React.js for the frontend, and Apache Spark and Elastic MapRed
 
 - Ishaan Rao
 
+## Screenshots 
+Login Page
+![login](screenshots/login.png?raw=true "Title")   
+
+Registration Page
+![login](screenshots/registration.png?raw=true "Title")   
+
+Homepage
+![login](screenshots/homepage.png?raw=true "Title")   
+
+news search Page
+![login](screenshots/news_search.png?raw=true "Title")  
+
+profile Page
+![login](screenshots/profile.png?raw=true "Title")  
+
+Friend Network Visualizer Page
+![login](screenshots/friend_network_visualizer.png?raw=true "Title")  
+
+Chat Page
+![login](screenshots/chat.png?raw=true "Title")   
+
+Spark Job Running on AWS EMR (Livy Interface)
+![login](screenshots/spark.png?raw=true "Title")
 
 ## Features
 
@@ -181,28 +205,3 @@ We used DynamoDB. **bold** fields are keys. Partition keys are indicated
   - **prefix - String (partition)**
   - **username - String (sort)**
   - fullname
-
-## Screenshots 
-Login Page
-![login](screenshots/login.png?raw=true "Title")   
-
-Registration Page
-![login](screenshots/registration.png?raw=true "Title")   
-
-Homepage
-![login](screenshots/homepage.png?raw=true "Title")   
-
-news search Page
-![login](screenshots/news_search.png?raw=true "Title")  
-
-profile Page
-![login](screenshots/profile.png?raw=true "Title")  
-
-Friend Network Visualizer Page
-![login](screenshots/friend_network_visualizer.png?raw=true "Title")  
-
-Chat Page
-![login](screenshots/chat.png?raw=true "Title")   
-
-Spark Job Running on AWS EMR (Livy Interface)
-![login](screenshots/spark.png?raw=true "Title")
