@@ -5,7 +5,7 @@ a Node.js server, React.js for the frontend, and Hadoop libraries such Apache Sp
 
 ## Team Members
 
-- [Batchema Sombie](https://www.github.com/batchema) (batchema)
+- [Batchema Sombie](https://www.github.com/batchema)
 
 - Divya Somayajula
 
